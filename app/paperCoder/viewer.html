@@ -1,0 +1,49 @@
+
+<!-- Form Modal -->
+<div class="modal fade in" id="{{ID}}" tabindex="-1" role="dialog"
+	aria-hidden="true">
+	<div class="modal-dialog" role="document"
+		style="max-width: 500px; margin-top: 200px;">
+		<div class="modal-content" style="max-width: 500px;">
+			<div class="modal-header">
+				<!-- Edit Button -->
+				<button ng-click="toggleEdit()"
+					ng-show="viewing.subDomains.length > 0" type="button"
+					class="close">
+					<span aria-hidden="true"><i class="fa fa-pencil"></i></span>
+				</button>
+				<!-- Close Button -->
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true"><i class="fa fa-times"></i></span>
+				</button>
+				<!-- Back Button -->
+				<button ng-click="back()" ng-show="viewStack.length > 1"
+					type="button" class="close" aria-label="Back">
+					<span aria-hidden="true"><i class="fa fa-chevron-left"></i></span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					Filling in
+					<code>{{viewing.meta.label}}</code>
+					Information
+				</h4>
+			</div>
+			<div class="modal-body">
+
+				<bd-field ng-repeat="field in viewing.fields" field="field"></bd-field>
+
+				<hr ng-show="viewing.subDomains.length > 0" />
+
+				<div class="row">
+					<bd-domain ng-repeat="domain in viewing.subDomains"
+						domain="domain"
+						ng-show="viewScope == domain.scope"></bd-domain>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Form Modal -->

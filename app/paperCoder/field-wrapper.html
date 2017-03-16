@@ -1,0 +1,13 @@
+<div class="form-group row">
+	<label class="control-label col-xs-8 text-left">{{field.label}}</label>
+	<div class="col-xs-4 text-right" ng-hide="readonly">
+		<a class="btn" ng-click="field.disabled=true" ng-hide="field.disabled"><i
+			class="fa fa-check-circle"></i></a> <a class="btn"
+			ng-click="field.disabled=false" ng-show="field.disabled"><i
+			class="fa fa-ban"></i></a>
+	</div>
+	<div class="col-xs-12">
+		<!-- Dynamic Input Types -->
+		<div ng-include="getContentUrl()"></div>
+	</div>
+</div>

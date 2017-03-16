@@ -1,0 +1,7 @@
+<p>{{field.placeholder}}</p>
+<select class="form-control" 
+	ng-model="field.value" ng-disabled="field.disabled"
+    data-toggle="tooltip" data-placement="top" title="{{field.tooltip}}">
+    <option value="" >-- Select One --</option>
+    <option ng-repeat="option in field.options" value="{{option}}">{{option}}</option>
+</select>

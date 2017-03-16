@@ -1,0 +1,11 @@
+<div class="btn-group">
+<p data-toggle="tooltip" data-placement="top" title="{{field.tooltip}}">{{field.placeholder}}</p>
+<label class="btn btn-default" ng-class="{'active': field.value=='field.trueOption'}" ng-disabled="field.disabled">
+  <input type="radio" name="{{field.name}}" ng-click="field.value='field.trueOption'" ng-hide="true"
+         ng-disabled="readonly"> {{field.trueOption}}
+</label>
+<label class="btn btn-default" ng-class="{'active': field.value=='field.falseOption'}" ng-disabled="field.disabled">
+  <input type="radio" name="{{field.name}}" ng-click="field.value='field.falseOption'" ng-hide="true"
+         ng-disabled="readonly"> {{field.falseOption}}
+</label>
+</div>

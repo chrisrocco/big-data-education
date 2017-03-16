@@ -1,0 +1,9 @@
+<div class="domainButton col-lg-3 col-md-4 col-sm-4 col-xs-6">
+	<a ng-click="clicked(domain)" href="" class="snip1489"
+		ng-class="{'done': isComplete(domain)}" data-toggle="tooltip"
+		data-placement="top" title="{{domain.tooltip}}"> <i
+		class="fa fa-{{domain.meta.faicon}}" ng-hide="editMode"></i> <i
+		class="fa fa-exchange" ng-show="editMode"></i>
+	</a>
+	<p>{{domain.meta.label}}</p>
+</div>
